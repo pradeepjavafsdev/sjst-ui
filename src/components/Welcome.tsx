@@ -31,7 +31,7 @@ const Welcome: FC<WelcomeProps> = ({ onDonateClick }) => (
             <p className=" text-sm mb-4">— ଜୟଦେବଙ୍କ ଗୀତା ଗୋବିନ୍ଦ ରେ ପ୍ରେରିତ</p>
         </div>
         <div className=" flex gap-4">
-            <button className=" px-4 py-2 rounded-[20px] font-semibold hover:shadow-[inset_2px_3px_5px_rgba(0,0,0,0.1)] text-black bg-[#FF8243] flex gap-3 items-center">
+            <button className=" px-4 py-2 rounded-[20px] font-semibold hover:shadow-[inset_2px_3px_5px_rgba(0,0,0,0.1)] text-white bg-[#FF8243] flex gap-3 items-center">
                 <b>
                     <GiBookshelf />
                 </b>
@@ -39,7 +39,7 @@ const Welcome: FC<WelcomeProps> = ({ onDonateClick }) => (
             </button>
             <button
                 onClick={onDonateClick}
-                className=" px-4 py-2 rounded-[20px] font-semibold hover:shadow-[inset_2px_3px_5px_rgba(0,0,0,0.1)] text-black bg-[#FF8243] flex gap-3 items-center"
+                className=" px-4 py-2 rounded-[20px] font-semibold hover:shadow-[inset_2px_3px_5px_rgba(0,0,0,0.1)] text-white bg-[#FF8243] flex gap-3 items-center"
             >
                 <b>
                     <GiPayMoney />

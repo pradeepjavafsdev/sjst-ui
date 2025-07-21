@@ -28,7 +28,7 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
                 <div className="flex gap-4">
                     <a
                         href="#welcome"
-                        className="px-4 py-2 rounded-[20px] font-semibold hover:shadow-[inset_2px_3px_5px_rgba(0,0,0,0.1)] text-black bg-[#FF8243] flex gap-3 items-center"
+                        className="px-4 py-2 rounded-[20px] font-semibold hover:shadow-[inset_2px_3px_5px_rgba(0,0,0,0.1)] text-white bg-[#FF8243] flex gap-3 items-center"
                     >
                         <FaHome />
                         Home
@@ -42,7 +42,7 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
                 <div className="flex gap-4">
                     <a
                         href="#contact"
-                        className="px-4 py-2 rounded-[20px] font-semibold hover:shadow-[inset_2px_3px_5px_rgba(0,0,0,0.1)] text-black bg-[#FF8243] flex gap-3 items-center"
+                        className="px-4 py-2 rounded-[20px] font-semibold hover:shadow-[inset_2px_3px_5px_rgba(0,0,0,0.1)] text-white bg-[#FF8243] flex gap-3 items-center"
                     >
                         <FaEnvelope />
                         Contact
@@ -70,7 +70,7 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
                     <a
                         href="#welcome"
                         onClick={() => setMenuOpen(false)}
-                        className="px-4 py-2 flex justify-center items-center gap-2 font-medium text-black bg-[#FF8243]"
+                        className="px-4 py-2 flex justify-center items-center gap-2 font-medium text-white bg-[#FF8243]"
                     >
                         <FaHome />
                         Home
@@ -78,7 +78,7 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
                     <a
                         href="#contact"
                         onClick={() => setMenuOpen(false)}
-                        className="px-4 py-2 flex justify-center items-center gap-2 font-medium text-black bg-[#FF8243]"
+                        className="px-4 py-2 flex justify-center items-center gap-2 font-medium text-white bg-[#FF8243]"
                     >
                         <FaEnvelope />
                         Contact
