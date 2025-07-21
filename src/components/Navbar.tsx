@@ -86,11 +86,11 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
 
             {/* Mobile menu */}
             {menuOpen && (
-                <div className="lg:hidden mt-4 flex flex-col gap-3 text-center rounded shadow-md">
+                <div className="lg:hidden mt-4 flex flex-col gap-3 text-center rounded shadow-md mb-4">
                     <a
                         href="#welcome"
                         onClick={() => setMenuOpen(false)}
-                        className="px-4 py-2 flex justify-center items-center gap-2 font-medium text-white bg-[#FF8243]"
+                        className="px-4 py-2 flex justify-center items-center gap-2 font-medium text-white bg-[#FF8243] rounded-lg"
                     >
                         <FaHome />
                         Home
@@ -98,7 +98,7 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
                     <a
                         href="#contact"
                         onClick={() => setMenuOpen(false)}
-                        className="px-4 py-2 flex justify-center items-center gap-2 font-medium text-white bg-[#FF8243]"
+                        className="px-4 py-2 flex justify-center items-center gap-2 font-medium text-white bg-[#FF8243] rounded-lg"
                     >
                         <FaEnvelope />
                         Contact
