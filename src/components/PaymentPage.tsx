@@ -10,7 +10,7 @@ const PaymentPage: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-base-200 absolute z-50">
+        <div className="min-h-screen flex items-center justify-center bg-base-200 absolute z-auto">
             <form
                 className="bg-white p-6 rounded-lg shadow-lg w-96"
                 onSubmit={handleSubmit}

@@ -39,10 +39,10 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
                 <div className=" flex items-center gap-2">
                     <img src="/assets/logo1.png" alt="" className=" w-20" />
                     <div className=" grid">
-                        <h2 className=" font-semibold text-2xl font-mono">
+                        <h2 className=" font-semibold text-xl font-mono">
                             SJS Trust
                         </h2>
-                        <p className=" font-light font-mono">
+                        <p className=" font-light font-mono text-sm">
                             Upersahi, Kendubilwo
                         </p>
                     </div>
@@ -66,10 +66,10 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
                 <div className=" flex items-center gap-2">
                     <img src="/assets/logo1.png" alt="" className=" w-16" />
                     <div>
-                        <h2 className=" font-semibold text-2xl font-mono">
+                        <h2 className=" font-semibold text-xl font-mono">
                             SJS Trust
                         </h2>
-                        <p className=" font-light font-mono">
+                        <p className=" font-light font-mono text-sm">
                             Upersahi, Kendubilwo
                         </p>
                     </div>

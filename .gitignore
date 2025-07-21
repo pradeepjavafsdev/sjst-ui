@@ -1,2 +1,6 @@
 node_modules
 pakpackage-lock.json
+.firebaserc
+firebase.json
+/dist
+.firebase/hosting.ZGlzdA.cache
