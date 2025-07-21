@@ -1,28 +1,30 @@
-import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import Welcome from "./components/Welcome";
+import React, { FC, useState } from "react";
 import History from "./components/History";
 import Gallery from "./components/Gallery";
 import Events from "./components/Events";
 import Members from "./components/Members";
 import Footer from "./components/Footer";
 import DonatePopup from "./components/DonatePopup";
+import Home from "./components/Home";
 
-const App: React.FC = () => {
-  const [showDonate, setShowDonate] = useState(false);
+const App: FC = () => {
+    const [showDonate, setShowDonate] = useState(false);
 
-  return (
-    <div className="font-sans scroll-smooth">
-      <Navbar onDonateClick={() => setShowDonate(true)} />
-      <Welcome />
-      <History />
-      <Gallery />
-      <Events />
-      <Members />
-      <Footer />
-      {showDonate && <DonatePopup onClose={() => setShowDonate(false)} />}
-    </div>
-  );
+    const handleDonateClick = () => {
+        setShowDonate(true);
+    };
+
+    return (
+        <div className="font-sans scroll-smooth">
+            <Home onDonateClick={handleDonateClick} />
+            <History />
+            <Gallery />
+            <Events />
+            <Members />
+            <Footer />
+            {showDonate && <DonatePopup onClose={() => setShowDonate(false)} />}
+        </div>
+    );
 };
 
 export default App;
