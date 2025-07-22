@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FC } from "react";
 import { FaHome, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 
-const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
+const Navbar: FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -17,7 +17,7 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
     return (
         <nav
             className={`w-full fixed top-0 z-50 px-4 transition-all duration-300 grid grid-cols-[92%] justify-center ${
-   scrolled
+                scrolled
                     ? "bg-white/80 shadow-md backdrop-blur text-black"
                     : "bg-transparent text-white"
             }`}
@@ -27,7 +27,7 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
                 {/* Left */}
                 <div className="flex gap-4">
                     <a
-                        href="#welcome"
+                        href="/"
                         className="px-4 py-2 rounded-[20px] font-semibold hover:shadow-[inset_2px_3px_5px_rgba(0,0,0,0.1)] text-white bg-[#FF8243] flex gap-3 items-center"
                     >
                         <FaHome />
@@ -52,7 +52,7 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
                 {/* Right */}
                 <div className="flex gap-4">
                     <a
-                        href="#contact"
+                        href="/contact"
                         className="px-4 py-2 rounded-[20px] font-semibold hover:shadow-[inset_2px_3px_5px_rgba(0,0,0,0.1)] text-white bg-[#FF8243] flex gap-3 items-center"
                     >
                         <FaEnvelope />
@@ -77,7 +77,6 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
                     </div>
                 </div>
 
-
                 {/* Right: Menu toggle button */}
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
@@ -89,19 +88,17 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
 
             {/* Mobile menu */}
             {menuOpen && (
-
                 <div className="lg:hidden mt-4 flex flex-col gap-3 text-center rounded shadow-md mb-4">
                     <a
-                        href="#welcome"
+                        href="/"
                         onClick={() => setMenuOpen(false)}
                         className="px-4 py-2 flex justify-center items-center gap-2 font-medium text-white bg-[#FF8243] rounded-lg"
-
                     >
                         <FaHome />
                         Home
                     </a>
                     <a
-                        href="#contact"
+                        href="/contact"
                         onClick={() => setMenuOpen(false)}
                         className="px-4 py-2 flex justify-center items-center gap-2 font-medium text-white bg-[#FF8243] rounded-lg"
                     >

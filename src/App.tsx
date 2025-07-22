@@ -1,29 +1,16 @@
-import React, { FC, useState } from "react";
-import History from "./components/History";
-import Gallery from "./components/Gallery";
-import Events from "./components/Events";
-import Members from "./components/Members";
-import Footer from "./components/Footer";
-import DonatePopup from "./components/DonatePopup";
-import Home from "./components/Home";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ContactPage from "./components/ContactPage";
+import HomePage from "./components/HomePage";
+import ErrorPage from "./components/ErrorPage";
 
-const App: FC = () => {
-    const [showDonate, setShowDonate] = useState(false);
-
-    const handleDonateClick = () => {
-        setShowDonate(true);
-    };
-
+const App: React.FC = () => {
     return (
-        <div className="font-sans scroll-smooth">
-            <Home onDonateClick={handleDonateClick} />
-            <History />
-            <Gallery />
-            <Events />
-            <Members />
-            <Footer />
-            {showDonate && <DonatePopup onClose={() => setShowDonate(false)} />}
-        </div>
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<ErrorPage />} />
+        </Routes>
     );
 };
 
