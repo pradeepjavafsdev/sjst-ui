@@ -17,7 +17,7 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
     return (
         <nav
             className={`w-full fixed top-0 z-50 px-4 transition-all duration-300 grid grid-cols-[92%] justify-center ${
-                scrolled
+   scrolled
                     ? "bg-white/80 shadow-md backdrop-blur text-black"
                     : "bg-transparent text-white"
             }`}
@@ -36,6 +36,7 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
                 </div>
 
                 {/* Center */}
+
                 <div className=" flex items-center gap-2">
                     <img src="/assets/logo1.png" alt="" className=" w-20" />
                     <div className=" grid">
@@ -61,6 +62,7 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
             </div>
 
             {/* Mobile/Tablet layout */}
+
             <div className="flex lg:hidden justify-between items-center py-2">
                 {/* Left: Logo */}
                 <div className=" flex items-center gap-2">
@@ -75,6 +77,7 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
                     </div>
                 </div>
 
+
                 {/* Right: Menu toggle button */}
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
@@ -86,11 +89,13 @@ const Navbar: React.FC<{ onDonateClick: () => void }> = ({ onDonateClick }) => {
 
             {/* Mobile menu */}
             {menuOpen && (
+
                 <div className="lg:hidden mt-4 flex flex-col gap-3 text-center rounded shadow-md mb-4">
                     <a
                         href="#welcome"
                         onClick={() => setMenuOpen(false)}
                         className="px-4 py-2 flex justify-center items-center gap-2 font-medium text-white bg-[#FF8243] rounded-lg"
+
                     >
                         <FaHome />
                         Home
